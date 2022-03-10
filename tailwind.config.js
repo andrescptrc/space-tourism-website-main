@@ -13,7 +13,8 @@ module.exports = {
     extend: {},
     fontFamily: {
       display: ['Bellefair', 'monospace'],
-      body: ['Barlow', 'sans-serif']
+      body: ['Barlow', 'sans-serif'],
+      title: ['Barlow Condensed', 'sans-serif']
     },
     colors: {
       black: '#010101',
@@ -29,9 +30,9 @@ module.exports = {
         dark: darken('#979797', 0.08)
       },
       'lavender-blue': {
-        light: lighten('#979797', 0.08),
-        DEFAULT: '#979797',
-        dark: darken('#979797', 0.08)
+        light: lighten('#D0D6F9', 0.08),
+        DEFAULT: '#D0D6F9',
+        dark: darken('#D0D6F9', 0.08)
       },
       charcoal: {
         light: lighten('#383B4B', 0.08),
@@ -44,9 +45,9 @@ module.exports = {
         dark: darken('#616476', 0.08)
       },
       cultured: {
-        light: lighten('#616476', 0.08),
-        DEFAULT: '#616476',
-        dark: darken('#616476', 0.08)
+        light: lighten('#F2F2F2', 0.08),
+        DEFAULT: '#F2F2F2',
+        dark: darken('#F2F2F2', 0.08)
       }
     }
   },

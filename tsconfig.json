@@ -18,6 +18,7 @@
     "paths": {
       "@modules/*": ["modules/*"],
       "@components/*": ["common/components/*"],
+      "@containers/*": ["common/containers/*"],
       "@atoms/*": ["common/components/atoms/*"],
       "@molecules/*": ["common/components/molecules/*"],
       "@organisms/*": ["common/components/organisms/*"],
