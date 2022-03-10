@@ -1,5 +1,5 @@
 const HomeView = () => {
-  return <h1 className="text-7xl">SPACE</h1>;
+  return <h1 className="font-display text-7xl text-red-500">SPACE</h1>;
 };
 
 export default HomeView;
