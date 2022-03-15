@@ -1,6 +1,10 @@
+import { useRouter } from 'next/router';
+
 const HomeView = () => {
+  const router = useRouter();
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-[url('/assets/home/background-home-mobile.jpg')] bg-cover bg-clip-border bg-bottom bg-no-repeat">
+    <div className="bg-main flex min-h-screen flex-col items-center justify-center bg-home-mobile">
       <div className="flex h-[384] w-[327px] flex-col justify-between text-center">
         <div>
           <h2 className="font-title uppercase text-lavender-blue">
@@ -17,7 +21,10 @@ const HomeView = () => {
           </h2>
         </div>
         <div className="mt-20 text-center">
-          <button className="h-[150px] w-[150px] rounded-full bg-white">
+          <button
+            className="h-[150px] w-[150px] rounded-full bg-white"
+            onClick={() => router.push('/destination')}
+          >
             <span className="font-display text-xl uppercase">Explore</span>
           </button>
         </div>

@@ -17,3 +17,7 @@
 .overlay:hover > div {
   @apply z-10 opacity-100;
 }
+
+.bg-main {
+  @apply bg-cover bg-clip-border bg-bottom bg-no-repeat;
+}

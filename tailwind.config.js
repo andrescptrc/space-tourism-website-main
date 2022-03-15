@@ -10,7 +10,11 @@ module.exports = {
     './src/common/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'home-mobile': "url('/assets/home/background-home-mobile.jpg')"
+      }
+    },
     fontFamily: {
       display: ['Bellefair', 'monospace'],
       body: ['Barlow', 'sans-serif'],
