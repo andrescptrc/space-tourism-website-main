@@ -1,8 +1,6 @@
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const HomeView = () => {
-  const router = useRouter();
-
   return (
     <div className="bg-main flex min-h-screen flex-col items-center justify-center bg-home-mobile">
       <div className="flex h-[384] w-[327px] flex-col justify-between text-center">
@@ -20,13 +18,14 @@ const HomeView = () => {
             world experience!
           </h2>
         </div>
-        <div className="mt-20 text-center">
-          <button
-            className="h-[150px] w-[150px] rounded-full bg-white"
-            onClick={() => router.push('/destination')}
-          >
-            <span className="font-display text-xl uppercase">Explore</span>
-          </button>
+        <div className="mt-20 flex w-full justify-center">
+          <div className="flex h-[150px] w-[150px] items-center justify-center rounded-full bg-white">
+            <Link href="/destination">
+              <a className="rounded-full bg-white">
+                <span className="font-display text-xl uppercase">Explore</span>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
