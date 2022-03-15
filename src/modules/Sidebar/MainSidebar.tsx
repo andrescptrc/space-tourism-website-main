@@ -2,9 +2,10 @@ import Image from 'next/image';
 
 const MainSidebar = () => {
   return (
-    <div className="flex w-screen justify-center p-6">
+    <div className="absolute left-0 top-0 flex w-screen justify-center p-6">
       <div className="flex w-[327px] items-center justify-between">
         <Image
+          className="cursor-pointer"
           src="/assets/shared/logo.svg"
           alt="Space Logo"
           layout="fixed"
