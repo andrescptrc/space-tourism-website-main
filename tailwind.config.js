@@ -14,7 +14,8 @@ module.exports = {
       backgroundImage: {
         'home-mobile': "url('/assets/home/background-home-mobile.jpg')",
         'destination-mobile':
-          "url('/assets/destination/background-destination-mobile.jpg')"
+          "url('/assets/destination/background-destination-mobile.jpg')",
+        'crew-mobile': "url('/assets/crew/background-crew-mobile.jpg')"
       }
     },
     fontFamily: {
