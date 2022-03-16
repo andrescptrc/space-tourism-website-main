@@ -4,9 +4,13 @@ import Image from 'next/image';
 import { useState } from 'react';
 import DestinationTabs from './components/DestinationTabs';
 import { DESTINATION_TABS } from './constants/destination.constants';
+import useCurrentPlanetImage from './hooks/useCurrentPlanetImage';
 
 const DestinationView = () => {
   const [categories] = useState(DESTINATION_TABS);
+  const [currentPlanet, setCurrentPlanet] = useState(1);
+
+  const CurrentPlanetImage = useCurrentPlanetImage(currentPlanet);
 
   return (
     <div className="bg-main flex min-h-screen flex-col items-center bg-destination-mobile pt-[88px]">
@@ -17,15 +21,10 @@ const DestinationView = () => {
         </h1>
 
         <div className="relative mb-[26px] h-[170px] w-[170px]">
-          <Image
-            src="/assets/destination/image-moon.png"
-            alt="Moon Image"
-            layout="fill"
-            className="absolute"
-          />
+          {CurrentPlanetImage}
         </div>
 
-        <Tab.Group>
+        <Tab.Group onChange={index => setCurrentPlanet(index)}>
           <Tab.List>
             {Object.keys(categories).map(category => (
               <Tab
