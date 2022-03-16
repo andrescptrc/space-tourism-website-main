@@ -19,13 +19,11 @@ const HomeView = () => {
           </h2>
         </div>
         <div className="mt-20 flex w-full justify-center">
-          <div className="flex h-[150px] w-[150px] items-center justify-center rounded-full bg-white">
-            <Link href="/destination">
-              <a className="rounded-full bg-white">
-                <span className="font-display text-xl uppercase">Explore</span>
-              </a>
-            </Link>
-          </div>
+          <Link href="/destination">
+            <a className="flex h-[150px] w-[150px] items-center justify-center  rounded-full bg-white">
+              <span className="font-display text-xl uppercase">Explore</span>
+            </a>
+          </Link>
         </div>
       </div>
     </div>

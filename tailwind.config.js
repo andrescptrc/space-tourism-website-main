@@ -12,7 +12,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'home-mobile': "url('/assets/home/background-home-mobile.jpg')"
+        'home-mobile': "url('/assets/home/background-home-mobile.jpg')",
+        'destination-mobile':
+          "url('/assets/destination/background-destination-mobile.jpg')"
       }
     },
     fontFamily: {
