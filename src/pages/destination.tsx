@@ -82,23 +82,39 @@ const Destination = () => {
             ))}
           </Tab.List>
           <Tab.Panels className="mt-2">
-            <Tab.Panel
-              className={classNames(
-                'rounded-xl bg-white p-3',
-                'ring-offset-blue-400 ring-white ring-opacity-60 ring-offset-2 focus:outline-none focus:ring-2'
-              )}
-            >
+            <Tab.Panel className={classNames()}>
               <ul>
-                <li className="hover:bg-coolGray-100 relative rounded-md p-3">
-                  <h3 className="text-sm font-medium leading-5"></h3>
-                  <ul className="text-coolGray-500 mt-1 flex space-x-1 text-xs font-normal leading-4"></ul>
-                  <a
-                    href="#"
-                    className={classNames(
-                      'absolute inset-0 rounded-md',
-                      'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2'
-                    )}
-                  />
+                <li className="relative rounded-md">
+                  <h2 className="font-display text-[56px] uppercase text-white">
+                    Moon
+                  </h2>
+
+                  <p className="mb-8 font-body text-lavender-blue">
+                    See our planet as you’ve never seen it before. A perfect
+                    relaxing trip away to help regain perspective and come back
+                    refreshed. While you’re there, take in some history by
+                    visiting the Luna 2 and Apollo 11 landing sites.
+                  </p>
+
+                  <div className="mb-8 h-[1px] w-full bg-spanish-gray" />
+
+                  <div className="mb-8 uppercase">
+                    <h3 className="mb-3 font-body  tracking-[2.36px] text-lavender-blue">
+                      Avg. Distance
+                    </h3>
+                    <p className="font-display text-[28px] text-white">
+                      384,400 km
+                    </p>
+                  </div>
+
+                  <div className="uppercase">
+                    <h3 className="mb-3 font-body  tracking-[2.36px] text-lavender-blue">
+                      Est. travel time
+                    </h3>
+                    <p className="font-display text-[28px] text-white">
+                      3 days
+                    </p>
+                  </div>
                 </li>
               </ul>
             </Tab.Panel>
