@@ -1,4 +1,4 @@
-export const DESTINATION_TABS = {
+export const DESTINATION_TABS: DestinationTabsProps = {
   Moon: [
     {
       id: 1,
@@ -39,4 +39,16 @@ export const DESTINATION_TABS = {
       etaTravelTime: '7 years'
     }
   ]
+};
+
+export interface DestinationTabsProps {
+  [key: string]: DestinationTabsObjectProps[];
+}
+
+export type DestinationTabsObjectProps = {
+  id: number;
+  title: string;
+  description: string;
+  averageDistance: string;
+  etaTravelTime: string;
 };
