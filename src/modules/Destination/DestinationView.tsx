@@ -41,42 +41,55 @@ const DestinationView = () => {
             ))}
           </Tab.List>
           <Tab.Panels className="mt-2">
-            <Tab.Panel className={classNames()}>
-              <ul>
-                <li className="relative rounded-md">
-                  <h2 className="font-display text-[56px] uppercase text-white">
-                    Moon
-                  </h2>
+            {Object.values(categories).map((category, index) => (
+              <Tab.Panel key={`tab-${index}`} className={classNames()}>
+                <ul>
+                  {category.map((tab, index) => {
+                    const {
+                      title,
+                      description,
+                      averageDistance,
+                      etaTravelTime
+                    } = tab;
 
-                  <p className="mb-8 font-body text-lavender-blue">
-                    See our planet as you’ve never seen it before. A perfect
-                    relaxing trip away to help regain perspective and come back
-                    refreshed. While you’re there, take in some history by
-                    visiting the Luna 2 and Apollo 11 landing sites.
-                  </p>
+                    return (
+                      <li
+                        className="relative rounded-md"
+                        key={`second-tab-${index}`}
+                      >
+                        <h2 className="font-display text-[56px] uppercase text-white">
+                          {title}
+                        </h2>
 
-                  <div className="mb-8 h-[1px] w-full bg-spanish-gray" />
+                        <p className="mb-8 font-body text-lavender-blue">
+                          {description}
+                        </p>
 
-                  <div className="mb-8 uppercase">
-                    <h3 className="mb-3 font-body  tracking-[2.36px] text-lavender-blue">
-                      Avg. Distance
-                    </h3>
-                    <p className="font-display text-[28px] text-white">
-                      384,400 km
-                    </p>
-                  </div>
+                        <div className="mb-8 h-[1px] w-full bg-spanish-gray" />
 
-                  <div className="uppercase">
-                    <h3 className="mb-3 font-body  tracking-[2.36px] text-lavender-blue">
-                      Est. travel time
-                    </h3>
-                    <p className="font-display text-[28px] text-white">
-                      3 days
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </Tab.Panel>
+                        <div className="mb-8 uppercase">
+                          <h3 className="mb-3 font-body  tracking-[2.36px] text-lavender-blue">
+                            Avg. Distance
+                          </h3>
+                          <p className="font-display text-[28px] text-white">
+                            {averageDistance}
+                          </p>
+                        </div>
+
+                        <div className="uppercase">
+                          <h3 className="mb-3 font-body  tracking-[2.36px] text-lavender-blue">
+                            Est. travel time
+                          </h3>
+                          <p className="font-display text-[28px] text-white">
+                            {etaTravelTime}
+                          </p>
+                        </div>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </Tab.Panel>
+            ))}
           </Tab.Panels>
         </Tab.Group>
       </div>
